@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Yelena Vertyagina](https://up.htmlacademy.ru/htmlcss/18/user/368857).
-* Наставник: `Неизвестно`.
+* Наставник: Keksobot.
 
 ---
 
