@@ -17,7 +17,8 @@
         </form>
         <ul class="user">
           <li class="user__item">
-            <a href="#" class="user__link">Войти</a>
+            <a href="#" class="user__link">Валентин Петухов</a>
+            <a href="#" class="user__link">Выйти</a>
           </li>
           <li class="user__item">
             <a href="#" class="user__link">Сравнить</a>
@@ -58,16 +59,143 @@
         </ul>
       </nav>
     </header>
-
   </div>
+
+  <main>
+    <div class="wrapper-internal">
+      <h1 class="title-h1">Моноподы для селфи</h1>
+      <section class="breadcrumbs">
+        <a href="index.html" class="breadcrumbs__link">Главная</a>
+        <a href="#" class="breadcrumbs__link">Каталог товаров</a>
+        <a class="breadcrumbs__link breadcrumbs__link--active">Моноподы для селфи</a>
+      </section>
+    </div>
+
+    <section class="catalog">
+      <div class="wrapper-catalog">
+        <div class="catalog__sidebar">
+        <form action="#" class="catalog__filter">
+          <p class="catalog__title">Фильтр:</p>
+          <fieldset class="catalog__field">
+            <p class="catalog__name">Стоимость</p>
+            <div class="range">
+              <div class="range__bar"></div>
+              <div class="range__progress"></div>
+              <div class="range__wrap">
+                <div class="range__control range__control--left"></div>
+                <div class="range__control range__control--right"></div>
+              </div>
+              <div class="range__wrap">
+                <p class="range__value range__value--left">от 0</p>
+                <p class="range__value range__value--right">до 5000</p>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="catalog__field">
+            <p class="catalog__name">Цвет</p>
+            <input type="checkbox" name="color" id="black" class="catalog__check" checked>
+            <label for="black" class="catalog__label">Черный</label>
+            <input type="checkbox" name="color" id="white" class="catalog__check">
+            <label for="white" class="catalog__label">Белый</label>
+            <input type="checkbox" name="color" id="blue" class="catalog__check" checked>
+            <label for="blue" class="catalog__label">Синий</label>
+            <input type="checkbox" name="color" id="red" class="catalog__check" checked>
+            <label for="red" class="catalog__label">Красный</label>
+            <input type="checkbox" name="color" id="pink" class="catalog__check">
+            <label for="pink" class="catalog__label">Розовый</label>
+          </fieldset>
+          <fieldset class="catalog__field">
+            <p class="catalog__name">Bluetooth</p>
+            <input type="radio" name="connect" id="yes" class="catalog__radio" checked>
+            <label for="yes" class="catalog__label">Есть</label>
+            <input type="radio" name="connect" id="no" class="catalog__radio">
+            <label for="no" class="catalog__label">Нет</label>
+          </fieldset>
+          <button type="submit" class="link">Показать</button>
+        </form>
+      </div>
+        <div class="catalog__show">
+        <div class="catalog__wrap">
+          <div class="catalog__sort">
+            <div class="catalog__block">
+              <p class="catalog__title">Сортировка:</p>
+              <a class="catalog__choice catalog__choice--active">По цене</a>
+              <a href="#" class="catalog__choice">По типу</a>
+              <a href="#" class="catalog__choice">По популярности</a>
+            </div>
+            <div class="catalog__control">
+              <button class="catalog__btn catalog__btn--up"></button>
+              <button class="catalog__btn catalog__btn--down catalog__btn--active"></button>
+            </div>
+          </div>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <img src="img/item-1.jpg" alt="Любительская селфи-палка" class="catalog__img" width="360" height="380">
+              <a href="#" class="catalog__text">
+                <p class="catalog__name">Любительская селфи-палка</p>
+                <span>500 руб.</span>
+              </a>
+              <div class="catalog__hover">
+                <a href="#" class="link">В корзину</a>
+                <button type="button" class="catalog__compare">Добавить к сравнению</button>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img src="img/item-2.jpg" alt="Профессиональная селфи-палка" class="catalog__img" width="360" height="380">
+              <a href="#" class="catalog__text">
+                <p class="catalog__name">Профессиональная<br>селфи-палка</p>
+                <span>1 500 руб.</span>
+              </a>
+              <div class="catalog__hover">
+                <a href="#" class="link">В корзину</a>
+                <button type="button" class="catalog__compare">Добавить к сравнению</button>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img src="img/item-3.jpg" alt="Непотопляемая селфи-палка" class="catalog__img" width="360" height="380">
+              <a href="#" class="catalog__text">
+                <p class="catalog__name">Непотопляемая селфи-палка</p>
+                <span>2 500 руб.</span>
+              </a>
+              <div class="catalog__hover">
+                <a href="#" class="link">В корзину</a>
+                <button type="button" class="catalog__compare">Добавить к сравнению</button>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной»" class="catalog__img" width="360" height="380">
+              <a href="#" class="catalog__text">
+                <p class="catalog__name">Селфи-палка «Следуй за мной»</p>
+                <span>4 900 руб.</span>
+              </a>
+              <div class="catalog__hover">
+                <a href="#" class="link">В корзину</a>
+                <button type="button" class="catalog__compare">Добавить к сравнению</button>
+              </div>
+            </li>
+          </ul>
+          <div class="pages">
+            <a href="#" class="pages__nav pages__nav--back">Назад</a>
+            <div class="pages__num">
+              <a class="pages__nav pages__nav--active">1</a>
+              <a href="#" class="pages__nav">2</a>
+              <a href="#" class="pages__nav">3</a>
+            </div>
+            <a href="#" class="pages__nav pages__nav--forward">Вперед</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="wrapper">
       <div class="footer__line">
-        <a class="logo logo--footer">DEVICE</a>
+        <a href="index.html" class="logo logo--footer">DEVICE</a>
         <ul class="user">
           <li class="user__item user__item--footer">
-            <a href="#" class="user__link">Войти</a>
+            <a href="#" class="user__link">Выйти</a>
           </li>
           <li class="user__item user__item--footer">
             <a href="#" class="user__link">Сравнить</a>
