@@ -75,6 +75,17 @@ img {
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .wrapper,
 .wrapper-catalog {
   width: 1200px;
@@ -163,6 +174,10 @@ img {
 .user__item:nth-child(n+2) {
   width: 25%;
   text-align: right;
+}
+
+.user__link--out {
+  color: rgba(0,0,0,0.3);
 }
 
 .footer .user__item {
@@ -457,9 +472,12 @@ img {
   display: flex;
 }
 
+.header {
+  position: relative;
+}
+
 .menu__list {
   display: flex;
-  position: relative;
 }
 
 .menu__link,
@@ -485,15 +503,23 @@ img {
   flex-grow: 1;
 }
 
-.menu__sub {
+.menu__wrap {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 170px;
   left: 0;
   width: 100%;
-  padding-bottom: 40px;
-  z-index: 10;
   background-color: #f7e296;
+  z-index: 10;
+}
+
+.menu__sub {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  padding-left: 60px;
+  padding-top: 20px;
 }
 
 .menu__subitem {
@@ -510,8 +536,8 @@ img {
   line-height: 36px;
 }
 
-.menu__item:first-child:hover .menu__sub {
-  display: flex;
+.menu__item:first-child:hover .menu__wrap {
+  display: block;
 }
 
 .link {
@@ -595,19 +621,19 @@ img {
 .benefits__info--delivery::after {
   width: 136px;
   height: 164px;
-  background-image: url(../img/delivery.png);
+  background-image: url(../img/delivery.svg);
 }
 
 .benefits__info--warranty::after {
   width: 171px;
   height: 195px;
-  background-image: url(../img/warranty.png);
+  background-image: url(../img/warranty.svg);
 }
 
 .benefits__info--credit::after {
   width: 156px;
   height: 188px;
-  background-image: url(../img/credit.png);
+  background-image: url(../img/credit.svg);
 }
 
 .benefits__title {
@@ -754,28 +780,37 @@ img {
 }
 
 .catalog {
-  width: 100%;
-  background-image:
-    linear-gradient(to right, rgba(239,239,239,0.5) 0, rgba(239,239,239,0.5) 30%, rgba(255,255,255,0.5) 30%, rgba(255,255,255,0.5) 100%),
-    linear-gradient(to bottom, rgba(219,219,219,0.5) 0, rgba(219,219,219,0.5) 70px, rgba(255,255,255,0.5) 70px, rgba(255,255,255,0.5) 100%);
-}
-
-.catalog__sidebar {
   display: flex;
-  justify-content: flex-end;
-/*  background-color: #eeeeee;*/
+  width: 100%;
+  background-image: linear-gradient(to bottom, #ebebeb 70px, #fff 70px);
 }
 
 .catalog__filter {
-/*  width: 347px;*/
-  padding-right: 67px;
-  padding-left: 60px;
+  width: 345px;
+  padding-left: 80px;
+  padding-right: 65px;
   margin-left: auto;
+  margin-right: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.catalog__filter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #dbdbdb 70px, #efefef 70px);
+  z-index: -1;
 }
 
 .catalog__wrap {
-/*  width: 853px;*/
+  width: 855px;
   padding-left: 73px;
+  padding-right: 20px;
+  margin-left: 0;
   margin-right: auto;
 }
 
@@ -1084,4 +1119,72 @@ img {
 
 .range__value--right {
   margin-left: 65px;
+}
+
+.modal {
+  display: none;
+  width: 960px;
+  padding: 85px 100px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+}
+
+.modal--map {
+  height: 560px;
+  background-image: url(../img/map-big.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal__close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+  background-image: url(../img/modal-close.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.modal__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal__field {
+  width: 360px;
+  margin-bottom: 35px;
+}
+
+.modal__field:first-of-type {
+  margin-right: 40px;
+}
+
+.modal__label {
+  display: block;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.modal__text,
+.modal__input {
+  width: 100%;
+  min-height: 50px;
+  padding: 15px 20px;
+  background-color: #f2f2f2;
+}
+
+.modal__text {
+  min-height: 155px;
+  margin-bottom: 45px;
+  border: none;
 }

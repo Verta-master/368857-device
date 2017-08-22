@@ -12,7 +12,7 @@
       <div class="logo">DEVICE</div>
       <div class="user-block">
         <form action="#" method="get" class="user__search">
-          <button class="user__btn" type="submit"></button>
+          <button class="user__btn" type="submit"><span class="visually-hidden">Поиск</span></button>
           <input type="text" class="user__input" placeholder="Поиск по сайту">
         </form>
         <ul class="user">
@@ -31,20 +31,22 @@
         <ul class="menu__list">
           <li class="menu__item">
             <a href="#" class="menu__link">Каталог товаров</a>
-            <ul class="menu__sub">
-              <li class="menu__subitem">
-                <a href="#" class="menu__sublink">Виртуальная реальность</a>
-                <a href="catalog.html" class="menu__sublink">Моноподы для селфи</a>
-                <a href="#" class="menu__sublink">Экшн-камеры</a>
-              </li>
-              <li class="menu__subitem">
-                <a href="#" class="menu__sublink">Фитнес-браслеты</a>
-                <a href="#" class="menu__sublink">Умные часы</a>
-              </li>
-              <li class="menu__subitem">
-                <a href="#" class="menu__sublink">Квадрокоптеры</a>
-              </li>
-            </ul>
+            <div class="menu__wrap">
+              <ul class="menu__sub">
+                <li class="menu__subitem">
+                  <a href="#" class="menu__sublink">Виртуальная реальность</a>
+                  <a href="catalog.html" class="menu__sublink">Моноподы для селфи</a>
+                  <a href="#" class="menu__sublink">Экшн-камеры</a>
+                </li>
+                <li class="menu__subitem">
+                  <a href="#" class="menu__sublink">Фитнес-браслеты</a>
+                  <a href="#" class="menu__sublink">Умные часы</a>
+                </li>
+                <li class="menu__subitem">
+                  <a href="#" class="menu__sublink">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="menu__item">
             <a href="#" class="menu__link">Доставка</a>
@@ -134,7 +136,7 @@
       <li class="promo__item">
         <a href="#" class="promo__link">
           <div class="promo__block">
-            <img src="img/popular-1.png" alt="" class="promo__img" width="97" height="55">
+            <img src="img/popular-1.svg" alt="Виртуальная реальность" class="promo__img" width="97" height="55">
           </div>
           <p class="promo__text">Виртуальная реальность</p>
         </a>
@@ -142,7 +144,7 @@
       <li class="promo__item">
         <a href="catalog.html" class="promo__link">
           <div class="promo__block">
-            <img src="img/popular-2.png" alt="" class="promo__img" width="86" height="117">
+            <img src="img/popular-2.svg" alt="Моноподы" class="promo__img" width="86" height="117">
           </div>
           <p class="promo__text">Моноподы<br>для селфи</p>
         </a>
@@ -150,7 +152,7 @@
       <li class="promo__item">
         <a href="#" class="promo__link">
           <div class="promo__block">
-            <img src="img/popular-3.png" alt="" class="promo__img" width="71" height="87">
+            <img src="img/popular-3.svg" alt="Экшн-камеры" class="promo__img" width="71" height="87">
           </div>
           <p class="promo__text">Экшн-камеры</p>
         </a>
@@ -158,7 +160,7 @@
       <li class="promo__item">
         <a href="#" class="promo__link">
           <div class="promo__block">
-            <img src="img/popular-4.png" alt="" class="promo__img" width="107" height="65">
+            <img src="img/popular-4.svg" alt="Фитнес-браслеты" class="promo__img" width="107" height="65">
           </div>
           <p class="promo__text">Фитнес-браслеты</p>
         </a>
@@ -166,7 +168,7 @@
       <li class="promo__item">
         <a href="#" class="promo__link">
           <div class="promo__block">
-            <img src="img/popular-5.png" alt="" class="promo__img" width="56" height="98">
+            <img src="img/popular-5.svg" alt="Умные часы" class="promo__img" width="56" height="98">
           </div>
           <p class="promo__text">Умные часы</p>
         </a>
@@ -174,7 +176,7 @@
       <li class="promo__item">
         <a href="#" class="promo__link">
           <div class="promo__block">
-            <img src="img/popular-6.png" alt="" class="promo__img" width="132" height="69">
+            <img src="img/popular-6.svg" alt="Квадрокоптеры" class="promo__img" width="132" height="69">
           </div>
           <p class="promo__text">Квадрокоптеры</p>
         </a>
@@ -185,43 +187,43 @@
   <section class="benefits">
     <div class="wrapper">
       <div class="benefits__list">
-      <input type="radio" name="benefits" id="delivery" class="benefits__input benefits__input--delivery" checked>
-      <input type="radio" name="benefits" id="warranty" class="benefits__input benefits__input--warranty">
-      <input type="radio" name="benefits" id="credit" class="benefits__input benefits__input--credit">
-      <div class="benefits__control">
-        <label for="delivery" class="benefits__label link">Доставка</label>
-        <label for="warranty" class="benefits__label link">Гарантия</label>
-        <label for="credit" class="benefits__label link">Кредит</label>
+        <input type="radio" name="benefits" id="delivery" class="benefits__input benefits__input--delivery" checked>
+        <input type="radio" name="benefits" id="warranty" class="benefits__input benefits__input--warranty">
+        <input type="radio" name="benefits" id="credit" class="benefits__input benefits__input--credit">
+        <div class="benefits__control">
+          <label for="delivery" class="benefits__label link">Доставка</label>
+          <label for="warranty" class="benefits__label link">Гарантия</label>
+          <label for="credit" class="benefits__label link">Кредит</label>
+        </div>
+        <div class="benefits__info benefits__info--delivery">
+          <h2 class="benefits__title">Доставка</h2>
+          <p class="text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </div>
+        <div class="benefits__info benefits__info--warranty">
+          <h2 class="benefits__title">Гарантия</h2>
+          <p class="text">Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
+        </div>
+        <div class="benefits__info benefits__info--credit">
+          <h2 class="benefits__title">Кредит</h2>
+          <p class="text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+        </div>
       </div>
-      <div class="benefits__info benefits__info--delivery">
-        <h2 class="benefits__title">Доставка</h2>
-        <p class="text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-      </div>
-      <div class="benefits__info benefits__info--warranty">
-        <h2 class="benefits__title">Гарантия</h2>
-        <p class="text">Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
-      </div>
-      <div class="benefits__info benefits__info--credit">
-        <h2 class="benefits__title">Кредит</h2>
-        <p class="text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-      </div>
-    </div>
     </div>
   </section>
 
   <div class="wrapper">
     <ul class="partners">
       <li class="partners__item">
-        <img src="img/logo-1-color.jpg" alt="Logo" class="partners__img" width="260" height="100">
+        <img src="img/logo-1-color.jpg" alt="DJI" class="partners__img" width="260" height="100">
       </li>
       <li class="partners__item">
-        <img src="img/logo-2-color.jpg" alt="Logo" class="partners__img" width="260" height="100">
+        <img src="img/logo-2-color.jpg" alt="SPGadgets" class="partners__img" width="260" height="100">
       </li>
       <li class="partners__item">
-        <img src="img/logo-3-color.jpg" alt="Logo" class="partners__img" width="260" height="100">
+        <img src="img/logo-3-color.jpg" alt="GoPro" class="partners__img" width="260" height="100">
       </li>
       <li class="partners__item">
-        <img src="img/logo-4-color.jpg" alt="Logo" class="partners__img" width="260" height="100">
+        <img src="img/logo-4-color.jpg" alt="Vive" class="partners__img" width="260" height="100">
       </li>
     </ul>
 
@@ -240,7 +242,7 @@
       <div class="info__block">
         <h2 class="info__title">Контакты</h2>
         <p class="info__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <div class="map"></div>
+        <div class="map"><span class="visually-hidden">Карта</span></div>
         <a href="#" class="link">НАпишите нам</a>
       </div>
     </section>
@@ -280,13 +282,33 @@
       <div class="footer__line">
         <div class="footer__deco"></div>
         <div class="social">
-          <a href="#" class="social__link social__link--fb">Facebook</a>
-          <a href="#" class="social__link social__link--in">Instagram</a>
-          <a href="#" class="social__link social__link--tw">Twitter</a>
+          <a href="#" class="social__link social__link--fb"><span class="visually-hidden">Facebook</span></a>
+          <a href="#" class="social__link social__link--in"><span class="visually-hidden">Instagram</span></a>
+          <a href="#" class="social__link social__link--tw"><span class="visually-hidden">Twitter</span></a>
         </div>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright">Базовый HTML и CSS</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright"><span class="visually-hidden">Базовый HTML и CSS</span></a>
       </div>
     </div>
   </footer>
+
+  <div class="modal">
+    <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
+    <form action="#" method="post" class="modal__form">
+      <div class="modal__field">
+        <label for="name" class="modal__label">Ваше имя:</label>
+        <input type="text" name="name" id="name" class="modal__input" placeholder="Представьтесь, пожалуйста">
+      </div>
+      <div class="modal__field">
+        <label for="email" class="modal__label">Ваш e-mail:</label>
+        <input type="email" name="email" id="email" class="modal__input" placeholder="Для отправки ответа">
+      </div>
+      <label for="text" class="modal__label">Текст письма:</label>
+      <textarea class="modal__text" name="text" id="text" placeholder="В свободной форме"></textarea>
+      <button type="submit" class="link">Отправить</button>
+    </form>
+  </div>
+  <div class="modal modal--map">
+    <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
+  </div>
 </body>
 </html>
